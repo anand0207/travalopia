@@ -1,0 +1,89 @@
+<html>
+
+<head>
+   <style>
+      nav {
+         padding: 41px 30px;
+         display: flex;
+         justify-content: space-around;
+      }
+
+      h1,
+      button {
+         z-index: 999;
+         position: relative;
+      }
+
+      p {
+         margin: 0px;
+      }
+
+      footer {
+         text-align: center;
+         padding: 41px 0px;
+      }
+
+      td {
+         color: #fff;
+      }
+
+      .c_button {
+         margin-top: 10px;
+         padding: 10px 30px;
+      }
+
+      tbody {
+         position: relative;
+      }
+
+
+      .overlay td:first-child:after {
+         content: "";
+         position: absolute;
+         z-index: 1;
+         display: block;
+         text-align: center;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #00000054;
+         color: white;
+      }
+   </style>
+</head>
+
+<body style="margin: 0px">
+   <article>
+      <header>
+         <nav>
+            <a href="#">Link 1</a> |
+            <a href="#">Link 2</a> |
+            <a href="#">Link 3</a> |
+            <a href="#">Link 4</a>
+         </nav>
+      </header>
+   </article>
+
+   <table overlay="red" background="/images/bg.jpg" width="100%" height="100%">
+      <tbody>
+         <tr class="overlay">
+            <td align="center" height="1" valign="middle">
+               <h1>This is Title.</h1>
+               <button class="c_button" onclick="smessage()">Click Here</button>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   
+   <footer>
+      <p>Copyright &#169; 2022 Travalopia</p>
+   </footer>
+</body>
+<script>
+   function smessage() {
+      alert('Hello, World')
+   }
+</script>
+
+</html>
